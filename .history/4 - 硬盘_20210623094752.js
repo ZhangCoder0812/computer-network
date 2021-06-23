@@ -64,28 +64,8 @@
                性能：读写速度低于raid0 高于raid1 折中方案
                冗余性：可以坏一块盘 有两块盘存真实数据 第三块盘存异或结果 
                        其中一个盘坏了 可以推倒出它的数据
-        raid10: 至少有4块盘 [raid1 + raid0 每两个做成raid1 然后将这2个raid1做成raid0]
-                raid1和raid0的整合产物 兼顾了raid1数据安全和raid0的读写速度 但成本大幅提升
-                通常用于数据库服务器       
+        raid10: 至少有4块盘 [raid1 + raid0 每两个做成raid1 然后将这2个做成raid0]
+               
 
         通常系统盘做raid1 其他盘做raid5
-
-        冗余从好到坏：RAID1 RAID10 RAID 5 RAID0
-        性能从好到坏：RAID0 RAID10 RAID5 RAID1
-        成本从低到高：RAID0 RAID5 RAID1 RAID10
-
-
-        8个二进制位称为一个字节B 1B=8bit
-        1kb = 1024B 千字节
-        1MB = 1024KB 兆字节
-        1GB = 1024MB 吉字节
-        1TB = 1024GB 太字节
-        1PB = 1024TB 拍字节
-        1EB = 1024PB 艾字节
-        1ZB = 1024EB 泽字节
-        1YB = 1024ZB 尧字节
-        1BB = 1024YB BB
-        1NB = 1024BB NB
-
-        市面上卖的硬盘都是按1000计算 如：500G硬盘 = 500*1000B*1000KB*1000MB
 */
